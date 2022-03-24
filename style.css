@@ -1,20 +1,31 @@
 .modal2 {
     position: fixed;
     top: 5%;
-    padding-top: 30px;
+    padding-top: 3 0px;
     left: 0;
     width: 100%;
     /* min-width: 600px; */
-    height: 100vh;
+    height: 200vh !important;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 100;
     display: none;
-    transition: all 0.9s;
+    transition: all 0.9s ease-in-out;
     animation: slide 0.9s;
 }
 
 #close {
     cursor: pointer;
+}
+
+.zzz {
+    z-index: 22;
+    position: fixed !important;
+    margin: 50px auto !important;
+    bottom: -12% !important;
+    left: 10% !important;
+    width: 10% !important;
+    display: none;
+    animation: slide 3s;
 }
 
 @keyframes slide {
@@ -39,28 +50,19 @@
     .img1 {
         display: none;
     }
-    #navmenu {
-        position: absolute;
-        top: 0;
-        right: 0;
-        text-align: center;
-        height: 100vh;
-        width: 30vw;
-        display: flex;
-        justify-content: center;
-        transform: translateX(300px);
-        /* transform: translateX(250px); */
-        /* align-items: center; */
-        /* display: none; */
+    body {
+        background-color: black;
     }
-    #navmenu ul {
-        margin: 30px auto;
+    .cm {
+        margin: 10px 0;
     }
-    #navmenu ul li {
-        padding: 20px 0;
-        text-align: center;
+    .ccb {
+        display: none;
     }
-    .open {
-        transform: translateX(-500px);
+}
+
+@media (min-width:769px) and (max-width:992px) {
+    .ccb {
+        display: none;
     }
 }

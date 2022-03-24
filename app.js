@@ -2,8 +2,10 @@ const btn1 = document.querySelector('#btn1'),
     close = document.querySelector('#close'),
     modal = document.querySelector('#modal'),
     submit = document.querySelector('#submit'),
-    nav = document.querySelector('#navmenu'),
-    open = document.querySelector('#openbtn')
+    btn3 = document.querySelector('#btn3'),
+    year = document.querySelector('#year'),
+    mol = document.querySelector('#mol'),
+    btnclose = document.querySelector('#btnclose')
 
 
 
@@ -13,7 +15,9 @@ btn1.addEventListener('click', function(e) {
 
 })
 close.addEventListener('click', closeModal)
-submit.addEventListener('click', closeModal)
+submit.addEventListener('click', (e) => {
+    e.preventDefault()
+})
 
 
 function closeModal(e) {
@@ -23,7 +27,27 @@ function closeModal(e) {
 }
 
 
-open.addEventListener('click', function() {
-    // nav.classList.toggle('open')
 
+
+
+btn3.addEventListener('click', function(e) {
+    e.preventDefault()
+
+
+})
+
+
+const date3 = new Date()
+const years = date3.getFullYear()
+year.innerHTML = years
+
+
+window.onload = function() {
+    mol.style.display = 'block'
+
+}
+
+
+btnclose.addEventListener('click', () => {
+    mol.style.display = 'none'
 })

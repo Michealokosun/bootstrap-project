@@ -6,36 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FRONT-END-WEB</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./fontawesome-free-5.15.1-web/fontawesome-free-5.15.1-web/css/all.min.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <!-- <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+    <div id="mol" class=" zzz  p-5 modal-fullscreen-sm-down  ">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" id="btnclose" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
-    <nav class="navbar position-relative navbar-expand-lg navbar-dark bg-dark fixed-top ">
+                </div>
+                <div class="modal-body">
+                    <p class="p-5">
+                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aliquid cum sequi eum quia deserunt aut doloribus amet expedita, ipsum quasi exercitationem excepturi earum eveniet ea odio inventore. Voluptatum, cupiditate?</small>
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <nav class="navbar  navbar-expand-md navbar-dark bg-dark fixed-top ">
         <div class="container">
-            <div class="logo p-2 ">
-                <a href="#" class="navbar-brand">Bootcamp Web</a>
+            <div class="logo ">
+                <a href="#" class=" navbar-brand">Bootcamp Web</a>
             </div>
 
-            <button type="button" class="btn " id="openbtn">
+            <button type="button" class="btn btn-dark d-md-none" data-bs-toggle="collapse" data-bs-target="#navmenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="nav-content open bg-secondary" id="navmenu">
-                <div class="close1">
-                    <h1 class="ps-3 text-light">&times;</h1>
-                </div>
-                <ul class="navbar-nav ms-auto">
+            <div class="collapse navbar-collapse" id="navmenu">
+
+                <ul class="navbar-nav  ms-sm-auto">
                     <li class="nav-item">
-                        <a href="#learn" class="nav-link text-light">What you 'll learn</a>
+                        <a href="#learn" class="nav-link text-center text-light">What you 'll learn</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item text-center">
                         <a href="#ques" class="nav-link text-light">Question</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item text-center">
                         <a href="#instru" class="nav-link text-light">Instructor</a>
                     </li>
                 </ul>
@@ -47,6 +67,10 @@
 
 
 
+
+
+
+
     <!-- section-2 -->
 
     <section class="section-2 bg-dark p-3 p-md-5 ">
@@ -54,13 +78,15 @@
             <div class="sec-item mt-5 row pb-4 pt-0 ps-2 d-flex justify-content-start align-items-center">
                 <div class="sec-con pt-2 mt-4 col-md-6 col-sm-12 text-align-centre">
                     <h1 class="text-white">Become A Web <span class="text-warning">Developer</span></h1>
-                    <p class="lead text-light lead">We Focus On Teaching our student the fundamentalof the latest and<br> the greatesttechnologies to prepare them for their first dev role</p>
+                    <p class="lead text-light lead">We Focus On Teaching our student the fund amentalof the latest and
+                        <br> the greatesttechnologies to prepare them for their first dev role
+                    </p>
 
                     <button type="btn" id="btn1" class="btn btn-primary px-5 py-2 ">Start The Enrollment</button>
 
 
                 </div>
-                <div class="con-img img-wrap col-md-6 col-sm-12 p-0">
+                <div class="con-img img-wrap col-md-6 col-sm-12 p-0 ">
                     <img class="img-fluid w-90 img1" src="images/undraw_dev_focus_re_6iwt.svg" alt="">
                 </div>
 
@@ -71,16 +97,33 @@
 
         </div>
         <div id="modal" class="modal2">
-            <div class="modal-content d-flex">
+            <div class="modal-content bg-dark text-light h-100 p-5 d-flex">
                 <div class="header text-center p-3">
                     <h1 id="close" class="text-end">&times;</h1>
                     <h1>ENROLLMENT FORM</h1>
                 </div>
-                <form action="" class=" d-flex flex-column justify-content-center align-items-center p-3">
-                    <label class="font-monospace  h1" for="user">Email</label>
-                    <input class="form-control" type="email" name="email" id="email"><br>
-                    <input class="btn btn-primary  px-md-4" type="submit" name="submit" id="submit"><br>
+                <form class="needs-validation">
+                    <div class="mb-3">
+                        <label for="validationCustomEmail" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="validationCustomUsername" class="form-label">Username</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">This will be your profile name.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="validationCustom03" class="form-label">Phone</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <div id="emailHelp" class="form-text">Pls enter a working phone number</div>
+                    </div>
 
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">By checking this button you will Accept our terms and condtion</label>
+                    </div>
+                    <button type="submit" id="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
@@ -88,30 +131,34 @@
 
 
     <!-- ======------------- -------------------section-3 -->
-    <section class="section3 ">
-        <div class="row bg-primary p-5">
-            <div class="col-md-6 col-sm-12 col-12 ps-5 text-white">
-                <h2 class="">Sign up On Our NewLetter</h2>
-            </div>
-            <div class="col-md-6 col-sm-12 col-12 pt-2">
-                <div class="input-group news-input pe-5">
-                    <input type="text" class="form-control" placeholder="Enter Email" />
-                    <button id="btn" class="btn btn-dark btn-lg" type="button">Submit</button>
+    <section class="section3  bg-primary p-4">
+        <div class="container">
+            <div class="row bg-primary p-">
+                <div class="col-md-6 col-sm-12 col-12 ps-5 text-white">
+                    <h2 class="">Sign up On Our NewLetter</h2>
+                </div>
+                <div class="col-md-6 col-sm-12 col-12 pt-2">
+                    <div class="input-group news-input pe-5">
+                        <input type="text" class="form-control" placeholder="Enter Email" />
+                        <button id="btn" class="btn btn-dark btn-lg" type="button">Submit</button>
+                    </div>
                 </div>
             </div>
+
         </div>
+
 
     </section>
 
 
 
-    <section class="section4 ">
+    <section class="section4 bg-secondary " id="learn">
         <div class="container">
-            <div class="row text-centre p-5 mx-auto g-4">
+            <div class="row text-centre p-5 mx-auto  cc">
 
                 <!-- ---------------------------------------card -1 -->
 
-                <div class="col-md-4 col-sm-12 col-12">
+                <div class="col-md-6 col-sm-12 col-12">
                     <div class="card bg-dark  text-light p-3">
                         <div class="card-body text-center">
                             <div class="h1 mb-3 ">
@@ -136,8 +183,8 @@
                 </div>
                 <!-- ==============-------------------------------------------------card-2 -->
 
-                <div class="col-md-4 col-sm-12 col-12">
-                    <div class="card bg-secondary ">
+                <div class="col-md-6 col-sm-12 col-12 cm ">
+                    <div class="card bg-primary ">
                         <div class="card-body text-light text-center">
                             <div class="h1 mb-3 pb-4  mt-3">
                                 <i class="fab fa-css3-alt"></i>
@@ -157,7 +204,7 @@
                 </div>
                 <!-- -------------------------------------------------------------------------card -3 -->
 
-                <div class="col-md-4 col-sm-12 col-12">
+                <div class="col-md-6 col-sm-12 col-12 my-3">
                     <div class="card bg-dark  text-light p-3">
                         <div class="card-body text-center">
                             <div class="h1 mb-3 ">
@@ -165,7 +212,7 @@
                             </div>
                             <div class="card-title text-centre">
                                 <div class="h2  ">
-                                    Learn Html
+                                    Learn JAVASCRIPT
                                 </div>
 
                                 <div class="card-text">
@@ -179,7 +226,351 @@
 
                     </div>
                 </div>
+
+
+                <!-- card 4---------------------------------------------- -->
+                <div class="col-md-6 col-sm-12 col-12 my-3">
+                    <div class="card bg-dark  text-light p-3">
+                        <div class="card-body text-center">
+                            <div class="h1 mb-3 ">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <div class="card-title text-centre">
+                                <div class="h2  ">
+                                    Learn PHP
+                                </div>
+
+                                <div class="card-text">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, fugit?</p>
+                                </div>
+                                <div class="card-footer">
+                                    <button class="btn btn-lg bg-primary text-light">Read More....</button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- end of card ---------------------------------- -->
             </div>
+
+    </section>
+    <section class="bg-dark ">
+        <div class="container p-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="img col-md-6 ">
+                    <img class="img-fluid" src="./images/undraw_react_y-7-wq.svg" alt="">
+                </div>
+
+                <div class="text2 col-md-6 border-start   border-2">
+
+
+                    <div class="h1 p-0 text-light text-uppercase"><span class="text-danger">learn</span> react for web application
+                    </div>
+                    <p class="lead text-light">Lorem ipsum dolor Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita minima dolor delectus sit, quia repudiandae maiores ullam harum. Dicta, expedita natus. Nulla cum fugiat laboriosam sed perferendis quia eligendi
+                        voluptatibus? sit amet consectetur, adipisicing elit. Iste repellat laborum ut id libero, pariatur debitis amet unde modi odio aut voluptates porro ex a culpa placeat. Sunt, quis distinctio.
+                    </p>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- end--------------------------------------------- -->
+    <section class="bg-dark ">
+        <div class="container p-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="img col-md-6 ">
+                    <img class="img-fluid" src="./images/undraw_static_website_0107.svg" alt="">
+                </div>
+
+                <div class="text2 col-md-6 border-start   border-2">
+                    <div class="h1 p-0 text-light text-uppercase"><span class="text-success">learn</span> html and css basics
+                    </div>
+                    <p class="lead text-light">Lorem ipsum dolor Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita minima dolor delectus sit, quia repudiandae maiores ullam harum. Dicta, expedita natus. Nulla cum fugiat laboriosam sed perferendis quia eligendi
+                        voluptatibus? sit amet consectetur, adipisicing elit. Iste repellat laborum ut id libero, pariatur debitis amet unde modi odio aut voluptates porro ex a culpa placeat. Sunt, quis distinctio.
+                    </p>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- end----------------------------------- -->
+
+    <section class="bg-dark ">
+        <div class="container p-5">
+            <div class="row d-flex justify-content-center align-items-center">
+                <div class="img col-md-6 ">
+                    <img class="img-fluid" src="./images/undraw_new_year_2022_p36n.svg" alt="">
+                </div>
+
+                <div class="text2 col-md-6 border-start   border-2">
+                    <div class="h1 p-0 text-light text-uppercase"><span class="text-warning">HAPPY</span> new year from dev community</div>
+                    <p class="lead text-light">Lorem ipsum dolor Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita minima dolor delectus sit, quia repudiandae maiores ullam harum. Dicta, expedita natus. Nulla cum fugiat laboriosam sed perferendis quia eligendi
+                        voluptatibus? sit amet consectetur, adipisicing elit. Iste repellat laborum ut id libero, pariatur debitis amet unde modi odio aut voluptates porro ex a culpa placeat. Sunt, quis distinctio.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- end---------------------------------- -->
+
+    <section class="bg-dark" id="ques">
+        <div class="container w-75 p-5">
+            <div class="row p-2 mx-auto">
+                <form action="" method="post" class="  bg-light rounded-top p-4">
+                    <div class="h1 p-2 text-uppercase text-success text-center">get in touch</div>
+
+                    <div class="email p-3">
+                        <label for="email">EMAIL</label>
+                        <input class=" form-control" type="text">
+                    </div>
+                    <div class="phone p-3">
+                        <label for="phone">PHONE</label>
+                        <input class=" form-control" type="text">
+                    </div>
+                    <div class="phone p-3">
+                        <label for="name">USERNAME</label>
+                        <input class=" form-control" type="text">
+                    </div>
+
+                    <div class="submit p-3">
+                        <input id="btn3" class="btn btn-primary btn-lg" type="submit">
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <section id="instru" class="bg-dark p-5">
+        <div class="container">
+            <div class="h1 text-light text-center border-bottom p-3 mb-5">OUR INSTRUCTORS</div>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide h-100" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <div class="card  mb-3" style="max-width: 1340px;">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <img src="./images/profile1.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <h5 class="card-title">MR EDWIN SHEWMARK</h5>
+                                        <p class="card-text">
+                                            <small class="text-muted border-success border-2  border-start">Developer and lead instructor
+                                            </small>
+                                        </p>
+                                        <p class="card-text">
+                                            <small class="text-muted">
+                                                <i class="fa fa-star text-dark"> </i><span class="ps-2">4.7 instructor Rating</span>
+                                            </small>
+                                        </p>
+                                        <p class="">
+                                            <small class="text-muted">
+                                                <i class="fa fa-user-alt text-dark"> </i><span class="ps-2">3,456,444 students</span>
+                                            </small>
+                                        </p>
+                                        <p class="card-text">This is a wider ca natural Lorem, ipsum dolor sit amet consectetur adipisicing el .
+                                        </p>
+
+                                        <p class="card-text ccb overflow-hidden">This is a wider Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, totam laboriosam. Voluptates, dolores. Incidunt esse iure repudiandae id vitae praesentium quis laudantium modi quisquam eius
+                                            eaque, non at porro ipsum commodi voluptatibus ad ab ratione ut, blanditiis tenetur. Adipisci, accusantium. card with supporting text below as a natural lead-in to additional content. This content is a little
+                                            bit longer.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <div class="card mb-3" style="max-width: 1340px;">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <img src="./images/profile3.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <h5 class="card-title">MR MICHEAL OKOSUN </h5>
+                                        <p class="card-text">
+                                            <small class="text-muted border-success border-2  border-start">Developer and Networking Tutor
+                                            </small>
+                                        </p>
+                                        <p class="card-text">
+                                            <small class="text-muted">
+                                                <i class="fa fa-star text-dark"> </i><span class="ps-2">5.7 instructor Rating</span>
+                                            </small>
+                                        </p>
+                                        <p class="">
+                                            <small class="text-muted">
+                                                <i class="fa fa-user-alt text-dark"> </i><span class="ps-2">10,456,444 students</span>
+                                            </small>
+                                        </p>
+                                        <p class="card-text">This is a wider card with supporting text below as
+                                        </p>
+                                        <p class="card-text ccb overflow-hidden">This is a wider Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, totam laboriosam. Voluptates, dolores. Incidunt esse iure repudiandae id vitae praesentium quis laudantium modi quisquam eius
+                                            eaque, non at porro ipsum commodi voluptatibus ad ab ratione ut, blanditiis tenetur. Adipisci, accusantium. card with supporting text below as a natural lead-in to additional content. This content is a little
+                                            bit longer.
+                                        </p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="1000">
+                        <div class="card mb-3" style="max-width: 1340px;">
+                            <div class="row g-0">
+                                <div class="col-md-6">
+                                    <img src="./images/profile2.jpg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <h5 class="card-title text-uppercase">MRS kareem kathern</h5>
+                                        <p class="card-text">
+                                            <small class="text-muted border-success border-2  border-start"> Backend Developer and lead instructor
+                                            </small>
+                                        </p>
+                                        <p class="card-text">
+                                            <small class="text-muted">
+                                                <i class="fa fa-star text-dark"> </i><span class="ps-2">4.7 instructor Rating</span>
+                                            </small>
+                                        </p>
+                                        <p class="">
+                                            <small class="text-muted">
+                                                <i class="fa fa-user-alt text-dark"> </i><span class="ps-2">14,456,444 students</span>
+                                            </small>
+                                        </p>
+                                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                                        </p>
+                                        <p class="card-text ccb overflow-hidden">This is a wider Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, totam laboriosam. Voluptates, dolores. Incidunt esse iure repudiandae id vitae praesentium quis laudantium modi quisquam eius
+                                            eaque, non at porro ipsum commodi voluptatibus ad ab ratione ut, blanditiis tenetur. Adipisci, accusantium. card with supporting text below as a natural lead-in to additional content. This content is a little
+                                            bit longer.
+                                        </p>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev mb-auto" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next mb-auto" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class=" border-light p-5 bg-dark">
+        <div class="container bg-dark">
+
+            <div class="row">
+                <div class="col-md-4 p-3">
+                    <div class="text-light">
+                        <p class="fis h3"><span class="text-warning">Company</span> information</p>
+                        <p>Contact Us</p>
+                        <p>Terms and Conditions</p>
+                        <p>Privacy Policy</p>
+                        <p>About Us</p>
+                    </div>
+                    <div class="text-light">
+                        <p p class="fis">Customer Service</p>
+                        <p>Shipping & Delivery</p>
+                        <p>SellersHub Express</p>
+                        <p>Return Policy</p>
+                    </div>
+
+                </div>
+                <div class="col-md-4 p-3">
+                    <p class=" text-light p-3 h3"><span class="text-warning">Kaiglo</span> Social</p>
+                    <div class="text-light">
+                        <i class="p-3 h3 fab fa-facebook"></i>
+                        <i class="p-3 h3 fab fa-twitter"></i>
+                        <i class="p-3 h3 fab fa-instagram"></i>
+                        <i class="p-3 h3 fab fa-telegram"></i>
+                    </div>
+
+                    <div class="text-light">
+                        <i class="p-3 h3 fab fa-facebook-messenger"></i>
+                        <i class="p-3 h3 fab fa-youtube"></i>
+                        <i class="p-3 h3 fab fa-pinterest-square"></i>
+                        <i class="p-3 h3 fab fa-wordpress"></i>
+                    </div>
+                    <div class="text-light">
+                        <i class="p-3 h3 fab fa-amazon"></i>
+                        <i class="p-3 h3 fab fa-vimeo"></i>
+                        <i class="p-3 h3 fab fa-amazon-pay"></i>
+                        <i class="p-3 h3 fab fa-amazon-pay"></i>
+                    </div>
+                    <div class="text-light">
+                        <i class="p-3 h3 fab fa-java"></i>
+                        <i class="p-3 h3 fab fa-hacker-news"></i>
+                        <i class="p-3 h3 fab fa-viadeo"></i>
+                        <i class="p-3 h3 fab fa-python"></i>
+                    </div>
+
+                </div>
+                <div class="col-md-4 p-3 text-light">
+                    <p class="h3 ">
+                        <span class="text-warning"> Make</span> money with us</p>
+                    <p>Sell on SellersHub</p>
+                    <p>Become an Affiliate Partner</p>
+                    <p class="fis">Download our Mobile App</p>
+                    <div class="img-con">
+                        <img src="images/google@.png" alt="">
+                        <img class="con-img1" src="images/apple@.png" alt="">
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+
+    </section>
+
+    <section class="bg-secondary p-2">
+        <div class="container">
+            <div class="copywrite bg-secondary text-center text-light p-3">
+                <p>Copyright © <span id="year">2020</span> SELLERSHUB STORES LIMITED. All Rights Reserved. User Agreement,<a href="index.html">Privacy and Cookies</a> </p>
+            </div>
+
+        </div>
 
     </section>
 
@@ -188,12 +579,16 @@
 
 
 
-    <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./app.js"></script>
 
 </body>
 
 </html>
 
 
-<!-- <i class="fab fa-js-square"></i> -->
+<!-- <i class="fab fa-js-square"></i>
+    class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+
+-->
